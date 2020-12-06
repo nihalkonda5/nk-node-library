@@ -1,7 +1,7 @@
 {
-  "name": "node-library",
+  "name": "nk-node-library",
   "version": "1.0.1",
-  "description": "Node Library",
+  "description": "NK Node Library",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
