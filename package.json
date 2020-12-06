@@ -1,0 +1,56 @@
+{
+  "name": "node-library",
+  "version": "1.0.1",
+  "description": "Node Library",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc --build",
+    "git": "tsc --build && git add . && git commit -am 'Quick Commit' && git push -u origin master"
+  },
+  "files": [
+    "lib"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.36",
+    "@types/node": "^14.6.4",
+    "ajv": "^6.12.5",
+    "ajv-sanitizer": "^1.1.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-list-endpoints": "^5.0.0",
+    "express-validator": "^6.6.1",
+    "external-ip": "^2.3.1",
+    "geoip-lite": "^1.4.2",
+    "jsonschema": "^1.2.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "nk-js-library": "github:nihalkonda5/nk-js-library#master",
+    "ts-node": "^9.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "esmodules": true
+          }
+        }
+      ],
+      "@babel/preset-react",
+      "@babel/preset-flow"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
