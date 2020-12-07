@@ -1,6 +1,7 @@
 import { AuthorService } from "../services";
 import * as express from 'express';
 import { Request } from "../helpers";
+import * as Constants from 'nk-constants';
 
 function isAuthor(service : AuthorService) {
     return async(req:express.Request, res:express.Response, next:express.NextFunction) => {
@@ -10,7 +11,7 @@ function isAuthor(service : AuthorService) {
         if(isAuthor){
             next();
         }else{
-            res.status(403).json({errorCode:'ONLY_AUTHOR_ACCESS',message:'Only Author is allowed to perform this operation'});
+            res.status(403).json({errorCode:Constants.API.CUSTOM_ERROR.ONLY_AUTHOR_ACCESS,message:'Only Author is allowed to perform this operation'});
         }
     }
 }

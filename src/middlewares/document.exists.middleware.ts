@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { Request } from '../helpers';
 import { BaseService } from '../services';
+import * as Constants from 'nk-constants';
 
 function checkDocumentExists(service : BaseService,paramName:string='id') {
     return async(req:express.Request, res:express.Response, next:express.NextFunction) => {
@@ -13,7 +14,7 @@ function checkDocumentExists(service : BaseService,paramName:string='id') {
         } catch (error) {
             
         }
-        res.status(404).json({errorCode:'NOT_FOUND',message:paramName+' not found'});
+        res.status(404).json({errorCode:Constants.API.CUSTOM_ERROR.NOT_FOUND,message:paramName+' not found'});
     }
 }
 

@@ -7,6 +7,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc --build",
+    "refresh": "npm uninstall nk-constants nk-js-library && npm i github:nihalkonda5/nk-constants#master github:nihalkonda5/nk-js-library#master",
     "git": "tsc --build && git add . && git commit -am 'Quick Commit' && git push -u origin master"
   },
   "files": [
@@ -30,6 +31,7 @@
     "jsonschema": "^1.2.6",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.3",
+    "nk-constants": "github:nihalkonda5/nk-constants#master",
     "nk-js-library": "github:nihalkonda5/nk-js-library#master",
     "ts-node": "^9.0.0"
   },
