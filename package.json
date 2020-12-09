@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --build",
-    "refresh": "npm uninstall nk-constants nk-js-library && npm i github:nihalkonda5/nk-constants#master github:nihalkonda5/nk-js-library#master",
+    "refresh": "yarn remove nk-constants nk-js-library && yarn add nihalkonda5/nk-constants nihalkonda5/nk-js-library",
     "git": "tsc --build && git rm -r --cached . && git add . && git commit -am 'Quick Commit'"
   },
   "files": [
