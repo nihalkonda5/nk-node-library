@@ -1536,7 +1536,7 @@ negotiator@0.6.2:
 
 nk-constants@nihalkonda5/nk-constants:
   version "1.0.0"
-  resolved "https://codeload.github.com/nihalkonda5/nk-constants/tar.gz/f876f4e6706ec038130f8effeb68d01573de1d71"
+  resolved "https://codeload.github.com/nihalkonda5/nk-constants/tar.gz/594a3599487bc1c7e59b8b4b1436e98a11744db4"
 
 nk-js-library@nihalkonda5/nk-js-library:
   version "1.0.1"
