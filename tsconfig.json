@@ -6,7 +6,7 @@
     "outDir": "lib",
     "strict": true,
     "removeComments": true,
-
+    
     "noImplicitAny": false,
     "noImplicitThis": false,
     "alwaysStrict": false,
@@ -14,7 +14,9 @@
     "strictFunctionTypes": false,
     "noImplicitReturns": false,
     "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
+    
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*"
