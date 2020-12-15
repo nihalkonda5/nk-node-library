@@ -1,7 +1,8 @@
+import { config } from 'dotenv';
 import routesList from './routes.list';
 
 if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config();
+    config();
 }
 
 const PORT = process.env.PORT;
