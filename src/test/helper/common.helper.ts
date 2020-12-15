@@ -1,7 +1,7 @@
-import {expect} from './chai.helper';
+import { expect } from 'chai';
 
-function jsonStructure(json,keys){
-    for(const k of keys){
+function jsonStructure(json, keys) {
+    for (const k of keys) {
         expect(k in json).to.be.true
         json = json[k]
     }
@@ -10,22 +10,22 @@ function jsonStructure(json,keys){
     return json
 }
 
-function nonEmptyString(value){
+function nonEmptyString(value) {
     expect(value).to.be.a('string')
     expect(value).to.not.equal("")
     return value
 }
 
-function isNumber(value){
+function isNumber(value) {
     expect(value).to.be.a('number')
     return value
 }
 
-function wait(ms:number){
-    return new Promise<number>(function(resolve, reject) {
-        setTimeout(function(){
+function wait(ms: number) {
+    return new Promise<number>(function (resolve, reject) {
+        setTimeout(function () {
             resolve(ms)
-        },ms)
+        }, ms)
     });
 }
 
