@@ -1,9 +1,11 @@
 import { config } from 'dotenv';
 import routesList from './routes.list';
 
+console.log('nk-node-library', 'config', process.env);
 if (process.env.NODE_ENV !== "production") {
     config();
 }
+console.log('nk-node-library', 'config', 'post', process.env);
 
 const PORT = process.env.PORT;
 const CUSTOM_PORT = process.env.CUSTOM_PORT;
