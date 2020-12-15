@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --build",
     "refresh": "yarn remove nk-constants nk-js-library && yarn add nihalkonda5/nk-constants nihalkonda5/nk-js-library",
-    "git": "tsc --build && git rm -r --cached . && git add . && git commit -am 'Quick Commit'"
+    "git": "tsc --build && git rm -r --cached . && git add . && git commit -am 'Quick Commit' && git push -u origin master"
   },
   "files": [
     "lib"
