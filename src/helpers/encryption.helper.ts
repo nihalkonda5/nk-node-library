@@ -1,16 +1,16 @@
-import {Utils} from 'nk-js-library';
+import { Utils } from 'nk-js-library';
 
 //REQUIRES CHANGES
-const getKey = (val:string) => {
+const getKey = (val: string) => {
     return val + ";[9,Tx.YHt+kTxr,"
 }
 
-const encryptPassword = function(password:string){
-    return Utils.EncryptionUtils.encrypt(password,getKey(password));
+const encryptPassword = function (password: string) {
+    return password.encrypt(getKey(password));
 }
 
-const checkPassword = function(encrypted:string,plain:string){
-    return Utils.EncryptionUtils.decrypt(encrypted,getKey(plain)) === plain;
+const checkPassword = function (encrypted: string, plain: string) {
+    return encrypted.decrypt(getKey(plain)) === plain;
 }
 
 export {

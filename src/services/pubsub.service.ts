@@ -1,30 +1,30 @@
-import {Services} from 'nk-js-library';
+import { Services } from 'nk-js-library';
 import Request from '../helpers/request.helper';
 
 const org = Services.PubSubService.Organizer
 
-interface NLMessage extends Services.PubSubService.Message{
-    request:Request
+interface NLMessage extends Services.PubSubService.Message {
+    request: Request
 }
 
-interface NLSubscriber{
-    processMessage(message:NLMessage) : any
+interface NLSubscriber {
+    processMessage(message: NLMessage): any
 }
 
-const addSubscriber = (messageType:string,subscriber:NLSubscriber) => {
-    return org.addSubscriber(messageType,subscriber)
+const addSubscriber = (messageType: string, subscriber: NLSubscriber) => {
+    return org.addSubscriber(messageType, subscriber);
 }
 
-const addSubscriberAll = (messageTypes:any,subscriber:NLSubscriber) => {
-    return org.addSubscriberAll(messageTypes,subscriber);
+const addSubscriberAll = (messageTypes: any, subscriber: NLSubscriber) => {
+    return org.addSubscriberAll(messageTypes, subscriber);
 }
 
-const publishMessage = (message:NLMessage) => {
+const publishMessage = (message: NLMessage) => {
     return org.publishMessage(message);
 }
 
-const removeSubscriber = (messageType:string,subscriber:NLSubscriber) => {
-    return org.removeSubscriber(messageType,subscriber)
+const removeSubscriber = (messageType: string, subscriber: NLSubscriber) => {
+    return org.removeSubscriber(messageType, subscriber)
 }
 
 export {

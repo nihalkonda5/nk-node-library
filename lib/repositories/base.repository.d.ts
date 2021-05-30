@@ -13,7 +13,7 @@ declare class BaseRepository implements Respository {
         pageSize: number;
         pageNum: number;
         resultSize: number;
-        resultTotalSize: any;
+        resultTotalSize: number;
         result: any[];
     }>;
     create: (document: any) => Promise<any>;
@@ -22,6 +22,11 @@ declare class BaseRepository implements Respository {
     updateOnePartial: (query: object, partial: any) => Promise<any>;
     delete: (documentId: string) => Promise<any>;
     deleteOne: (query: object) => Promise<any>;
-    deleteAll: () => Promise<any>;
+    deleteAll: () => Promise<{
+        ok?: number;
+        n?: number;
+    } & {
+        deletedCount?: number;
+    }>;
 }
 export default BaseRepository;
