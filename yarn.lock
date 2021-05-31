@@ -1459,7 +1459,7 @@ nk-constants@nihalkonda5/nk-constants:
 
 nk-js-library@nihalkonda5/nk-js-library:
   version "1.0.1"
-  resolved "https://codeload.github.com/nihalkonda5/nk-js-library/tar.gz/fb09bf9ac6be874556991ff6ed0ea0857bf1c8de"
+  resolved "https://codeload.github.com/nihalkonda5/nk-js-library/tar.gz/5ae13f6c3e454d9362529f1787d17a9799953f9c"
   dependencies:
     "@types/firebase" "^3.2.1"
     "@types/node-geocoder" "^3.24.1"
